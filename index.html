@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Brewing Kit" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="brewing kit, cups, mugs" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESPRO</title>
+    <link rel="icon" type="image/x-icon" href="./Images/Espro logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./Css/index.css" />
+    <link rel="stylesheet" href="./Css/bootstrap.css" />
+  </head>
+  <body>
+    <!-- Shipping message -->
+
+    <div
+      class="shipping_message container-fluid bg-seagull d-flex align-items-center font-josefin fw-700 justify-content-center text-white"
+      style="height: 37px"
+    >
+      FREE SHIPPING ON ALL U.S. ORDERS $49+
+    </div>
+
+    <!-- Navbar -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light d-flex justify-content-around bg-white w-100"
+    >
+      <div class="nav_container container-fluid d-flex justify-content-between">
+        <div class="toggle_and_personIcon d-xl-none">
+          <a
+            href="#sidebar"
+            data-bs-toggle="offcanvas"
+            role="button"
+            aria-controls="sidebar"
+          >
+            <img
+              src="./Images/icon_menu_bars.svg"
+              alt="bars icon"
+              class="bars me-3"
+              id="navbar_toggle_icon"
+              onclick="iconChanger()"
+          /></a>
+        </div>
+
+        <div
+          class="logo d-flex align-items-center justify-content-around navbar-brand"
+        >
+          <img
+            src="./Images/Espro logo.svg"
+            alt="logo image"
+            class="logo_img ms-5 ms-xl-0"
+          />
+
+          <div class="d-none d-xl-flex align-items-center navbar_list">
+            <ul class="list-unstyled nav_list_container my-auto">
+              <li class="nav_list d-inline d-xl-none fw-700 font-josefin">
+                SHOP
+                <img src="./Images/icon_arrow_down.svg" alt="arrow" />
+              </li>
+              <li
+                class="nav_list d-inline d-none d-xl-inline megamenu fw-700 font-josefin"
+              >
+                SHOP
+                <img src="./Images/icon_arrow_down.svg" alt="arrow" />
+                <div
+                  class="megamenu_container position-absolute fw-700 font-josefin"
+                  style="
+                    top: 46px;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                    z-index: 5;
+                  "
+                >
+                  <div
+                    class="container-xl d-flex justify-content-start"
+                    style="padding-bottom: 44px"
+                  >
+                    <div class="mega1" style="flex: 1">
+                      <img
+                        src="./Images/frenchPress.png"
+                        alt=""
+                        class="d-block mx-auto"
+                      />
+                      <h1 class="mega-title font-barlow fw-700 text-center">
+                        FRENCH PRESS
+                      </h1>
+                    </div>
+                    <div class="mega2" style="flex: 1">
+                      <img
+                        src="./Images/travelPress.png"
+                        alt=""
+                        class="d-block mx-auto"
+                      />
+                      <h1 class="mega-title font-barlow fw-700 text-center">
+                        TRAVEL PRESS
+                      </h1>
+                    </div>
+                    <div class="mega3" style="flex: 1">
+                      <img
+                        src="./Images/pressImage.png"
+                        alt=""
+                        class="d-block mx-auto"
+                      />
+                      <h1 class="mega-title font-barlow fw-700 text-center">
+                        POUR OVER
+                      </h1>
+                    </div>
+                    <div
+                      class="mega4 d-flex flex-column justify-content-center"
+                      style="flex: 1"
+                    >
+                      <ul class="list-unstyled mx-auto">
+                        <li class="mega_list_title font-josefin fw-700">
+                          OTHER COLLECTIONS
+                        </li>
+                        <li class="mega_list_item font-barlow fw-600">
+                          COLD BREW
+                        </li>
+                        <li class="mega_list_item font-barlow fw-600">
+                          ESPRESSO
+                        </li>
+                        <li class="mega_list_item font-barlow fw-600">
+                          TASTING CUPS
+                        </li>
+                        <li class="mega_list_item font-barlow fw-600">
+                          ACCESSORIES
+                        </li>
+                        <li>
+                          <button
+                            class="btn btn-white text-black megamenu_btn fw-bold font-josefin border border-black ms-0 d-flex justify-content-center align-items-center"
+                            style="border-radius: 26px; margin-top: 25px"
+                          >
+                            SHOP ALL
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_list d-inline fw-700 font-josefin">OUR STORY</li>
+              <li class="nav_list d-inline fw-700 font-josefin">BREW GUIDES</li>
+              <li class="nav_list d-inline fw-700 font-josefin">BLOG</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="search_and_basket d-flex align-items-center">
+          <img
+            src="./Images/icon_search.svg"
+            alt="search icon"
+            class="nav_icon"
+            style="width: 20px; height: 22px"
+          />
+
+          <img
+            src="./Images/icon_account.svg"
+            alt="account icon"
+            class="nav_icon d-none d-lg-inline"
+            style="width: 20px; height: 22px"
+          />
+
+          <img
+            src="./Images/icon_shopping_bag.svg"
+            alt="bag icon"
+            class="nav_icon_bag"
+            style="width: 20px; height: 26px"
+          />
+          <div
+            class="items text-dark d-flex align-items-center justify-content-center rounded-circle me-xl-4 bg-roundBlue"
+            style="width: 24px; height: 24px; font-size: 13px"
+          >
+            0
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Offcanvas - Sidebar-->
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebar-label"
+      style="margin-top: 95px"
+    >
+      <div class="offcanvas-header d-none"></div>
+      <div class="offcanvas-body p-0">
+        <ul class="list-unstyled p-0 mb-0">
+          <li
+            class="shop_products text-raisin fw-700 font-josefin"
+            style="margin-top: 24px"
+          >
+            SHOP PRODUCTS
+          </li>
+          <li class="sidebar_list font-barlow fw-700">FRENCH PRESS</li>
+          <li class="sidebar_list font-barlow fw-700">POUR OVER</li>
+          <li class="sidebar_list font-barlow fw-700">TRAVEL PRESS</li>
+          <li class="sidebar_list font-barlow fw-700">COLD BREW</li>
+          <li class="sidebar_list font-barlow fw-700">ESPRESSO</li>
+          <li class="sidebar_list font-barlow fw-700">TASTING CUPS</li>
+          <li class="sidebar_list font-barlow fw-700">ACCESSRIES</li>
+          <li
+            class="shop_all text-raisin fw-700 font-josefin"
+            style="margin-top: 25px; margin-bottom: 44px"
+          >
+            SHOP ALL
+          </li>
+        </ul>
+
+        <div class="bg-btmSide" style="padding-bottom: 50px">
+          <ul class="list-unstyled">
+            <li
+              class="sidebar_second_list font-josefin fw-700"
+              style="padding-top: 45px"
+            >
+              LOGIN
+            </li>
+            <li class="sidebar_second_list font-josefin fw-700">OUR STORY</li>
+            <li class="sidebar_second_list font-josefin fw-700">BREW GUIDES</li>
+            <li class="sidebar_second_list font-josefin fw-700">BLOG</li>
+            <li class="sidebar_second_list font-josefin fw-700">FAQS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--Hero Section-->
+
+    <div
+      class="hero d-flex align-items-center flex-column justify-content-center position-relative"
+      style="background-image: url(./Images/hero.png)"
+    >
+      <h2 class="text-center text-white hero-header font-barlow fw-700 mb-0">
+        BREW ANYWHERE. <br class="d-xl-none" />
+        BE ANYWHERE.
+      </h2>
+
+      <p class="text-center text-white hero-paragraph my-0 font-nunito fw-400">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut <br class="d-none d-lg-block" />
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo.
+      </p>
+
+      <button
+        class="btn bg-white text-black hero-btn fw-bold font-josefin d-flex align-items-center justify-content-center border-0"
+        style="border-radius: 26px"
+      >
+        POUR ON THE GO
+      </button>
+      <p class="position-absolute hero-explore text-white font-josefin fw-700">
+        EXPLORE
+        <img src="./Images/icon_arrow_right.svg" alt="" class="mb-1 ms-1" />
+      </p>
+    </div>
+
+    <!--Best Sellers Section-->
+
+    <div class="best-sellers position-relative">
+      <p class="best-sellers-subtitle text-center font-josefin fw-700">
+        POUR YOUR BEST CUP WITH
+      </p>
+      <h1 class="best-sellers-title text-center mb-0 font-barlow fw-700">
+        OUR BEST SELLERS
+      </h1>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide seller-slide">
+            <div class="card border-0">
+              <img
+                class="card-img-top"
+                src="./Images/coffeeFrenchPress7.png"
+                alt="Card image cap"
+              />
+              <div
+                class="card-body p-0"
+                style="background: transparent !important"
+              >
+                <h5 class="stars-container mb-0">
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                </h5>
+                <h5 class="card-title font-josefin fw-700 mb-0">
+                  ESPRO COFFEE FRENCH PRESS P7
+                </h5>
+                <p class="card-text font-nunito fw-400">$109.95 - $139.95</p>
+                <div class="color-palette-container d-flex">
+                  <div
+                    class="press-palette-1 bg-darkGray"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-2 bg-white border"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-3 bg-darkGray"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-4 bg-raisin"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide seller-slide">
+            <div class="card border-0">
+              <img
+                class="card-img-top"
+                src="./Images/coffeeFrenchPress6.png"
+                alt="Card image cap"
+              />
+              <div class="card-body p-0">
+                <h5 class="stars-container">
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                </h5>
+                <h5 class="card-title font-josefin fw-700">
+                  ESPRO COFFEE FRENCH PRESS P6
+                </h5>
+                <p class="card-text font-nunito fw-400">
+                  $89.95 <span style="opacity: 0.3">$99.95</span>
+                </p>
+                <div class="color-palette-container d-flex">
+                  <div
+                    class="press-palette-1 bg-raisin"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-2 bg-darkGray"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide seller-slide">
+            <div class="card border-0">
+              <img
+                class="card-img-top"
+                src="./Images/coffeeBrewingKit.png"
+                alt="Card image cap"
+              />
+              <div class="card-body p-0">
+                <h5 class="stars-container">
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                </h5>
+                <h5 class="card-title font-josefin fw-700">
+                  BLOOM POUR OVER COFFEE BREWING KIT, 18 OZ
+                </h5>
+                <p class="card-text font-nunito fw-400">$99.95</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide seller-slide">
+            <div class="card border-0">
+              <img
+                class="card-img-top"
+                src="./Images/coffeePress0.png"
+                alt="Card image cap"
+              />
+              <div class="card-body p-0 position-relative">
+                <h5 class="stars-container">
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                  <img
+                    src="./Images/star.svg"
+                    alt=""
+                    style="height: 14px; width: 15px"
+                  />
+                </h5>
+                <h5 class="font-josefin fw-700">
+                  ESPRO ULTRALIGHT COFFEE PRESS P0
+                </h5>
+                <p class="card-text font-nunito fw-400">$44.95</p>
+                <div class="color-palette-container d-flex">
+                  <div
+                    class="press-palette-1 bg-darkGray"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-2 bg-white border"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-3 bg-darkerGray"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-4 bg-raisin"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-5 bg-paletteGreen"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                  <div
+                    class="press-palette-6 bg-paletteBlue"
+                    style="width: 22px; height: 22px; border-radius: 50%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-next best-sellers-next bg-white">
+          <img src="./Images/icon_arrow_next.svg" alt="" style="width: 22px" />
+        </div>
+      </div>
+    </div>
+
+    <!--Images and Text Section-->
+    <div class="images-and-text text-center d-lg-flex">
+      <div class="text-container order-2 my-lg-auto" style="flex: 1">
+        <p
+          class="it_subtitle text-center px-auto mb-0 text-lg-start font-josefin fw-700 ms-0"
+        >
+          DESIGNED FOR REAL LIFE
+        </p>
+        <h1 class="it_title text-center text-lg-start mb-0 font-barlow fw-700">
+          COFFEE MADE FOR <br />
+          YOUR LIFE ON THE GO.
+        </h1>
+
+        <p class="it_text text-lg-start d-xl-none font-nunito fw-400">
+          We understand coffee is a big part of your <br />
+          busy, active life. That’s why we create and <br />
+          develop products that allow you to bring <br />
+          your passion for
+          <span class="fw-bold">coffee-when you want it- <br /></span> and
+          wherever life takes you.
+        </p>
+
+        <p class="it_text text-lg-start d-none d-xl-block font-nunito fw-400">
+          We understand coffee is a big part of your busy, active life. That’s
+          why we create <br />
+          and develop products that allow you to bring your passion for
+          <span class="fw-bold"
+            >coffee-when you <br />
+            want it-</span
+          >
+          and wherever life takes you.
+        </p>
+
+        <img
+          src="./Images/man_drinking.png"
+          alt=""
+          class="mt-5 ms-0 d-none d-lg-block w-75"
+        />
+      </div>
+
+      <div
+        class="images-container position-relative d-lg-flex flex-column m-lg-0"
+        style="flex: 1"
+      >
+        <img
+          src="./Images/bottle_grass.png"
+          alt=""
+          class="bottle_grass position-absolute"
+        />
+        <img
+          src="./Images/book_and_coffee.png"
+          alt=""
+          class="book_and_coffee position-absolute d-lg-none"
+        />
+        <img
+          src="./Images/man_and_cup.png"
+          alt=""
+          class="man_and_cup position-absolute d-lg-none"
+        />
+        <img
+          src="./Images/woman_pouring_tea.png"
+          alt=""
+          class="woman_pouring_tea position-absolute"
+        />
+        <img
+          src="./Images/man_drinking.png"
+          alt=""
+          class="man_drinking position-absolute d-lg-none"
+        />
+        <img
+          src="./Images/bottle_in_purse.png"
+          alt=""
+          class="bottle_in_purse position-absolute d-lg-none"
+        />
+        <div class="dots d-lg-none"></div>
+      </div>
+    </div>
+
+    <!--Explore Our Products-->
+
+    <div class="explore_container d-flex flex-column">
+      <div class="explore_title_main font-barlow fw-700 text-center">
+        EXPLORE OUR PRODUCTS
+      </div>
+      <div
+        class="explore_images_container d-flex flex-column flex-md-row justify-content-center"
+      >
+        <div class="explore_first">
+          <div class="explore_title font-josefin fw-700 text-white">
+            FRENCH PRESS
+          </div>
+          <button
+            class="btn btn-white d-none explore_btn font-josefin fw-700 border-0"
+          >
+            SHOP NOW
+          </button>
+        </div>
+        <div class="explore_second">
+          <div class="explore_title font-josefin fw-700 text-white">
+            POUR OVER
+          </div>
+          <button
+            class="btn btn-white d-none explore_btn font-josefin fw-700 border-0"
+          >
+            SHOP NOW
+          </button>
+        </div>
+        <div class="explore_third">
+          <div class="explore_title font-josefin fw-700 text-white">
+            COLD BREW
+          </div>
+          <button
+            class="btn btn-white d-none explore_btn font-josefin fw-700 border-0"
+          >
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-white shop_btn mx-auto d-lg-none font-josefin fw-700 d-flex align-items-center justify-content-center"
+        style="border-radius: 26px"
+      >
+        SHOP ALL
+      </button>
+      <button
+        type="button"
+        class="btn btn-white shop_btn mx-auto d-none d-lg-flex font-josefin fw-700 align-items-center justify-content-center"
+        style="border-radius: 26px"
+      >
+        SHOP ALL PRODUCTS
+      </button>
+    </div>
+
+    <!--Experience-->
+
+    <div class="container-fluid px-0">
+      <div class="row experience_container bg-seagull">
+        <div
+          class="col-lg-6 experience_first d-flex flex-column justify-content-center text-white"
+        >
+          <h1
+            class="experience_title font-barlow fw-700 mx-auto text-center mb-0 mt-lg-0"
+          >
+            MAKE EVERY CUP AN EXPERIENCE.
+          </h1>
+          <p
+            class="mx-auto text-center experience_paragraph font-nunito fw-400"
+          >
+            Have your French pressed coffee anywhere with ESPRO’s Travel Press.
+            A <br class="d-none d-xxl-block" />
+            double micro-filter eliminates grit for your smoothest cup on the
+            go, and the <br class="d-none d-xxl-block" />
+            mug fits right in a car cup holder or bike’s water bottle cage.
+          </p>
+          <button
+            type="button"
+            class="btn btn-white bg-white mx-auto experience_btn font-josefin fw-700 d-flex align-items-center justify-content-center border-0"
+            style="border-radius: 26px; margin-top: 30px"
+          >
+            SHOP TRAVEL PRESS
+          </button>
+        </div>
+        <div class="col-lg-6 bg-seagull my-auto">
+          <img
+            src="./Images/man_holding_a_bottle.png"
+            alt=""
+            class="d-block w-100 experience_img"
+          />
+          <p
+            class="experience_second_subtitle font-barlow fw-700 text-center px-xl-0"
+          >
+            PRESS. SIP. ENJOY.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Testimonials-->
+
+    <div class="testimonirals_container">
+      <div class="swiper swiper3 me-0">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div
+            class="swiper-slide text-center testimonials_title d-xl-none font-josefin"
+          >
+            <h6
+              style="font-size: 12px; letter-spacing: 1.2px"
+              class="fw-bold mb-0"
+            >
+              IN THE PRESS
+            </h6>
+
+            <h3
+              class="text-center testimonials_text font-nunito fw-400 mx-md-auto mb-0 px-lg-0"
+            >
+              “The result is a richly flavored, super aromatic cup of coffee
+              without the usual silt in the bottom. The press isn’t just for
+              coffee, either—there’s also a tea filter available that isolates
+              tea leaves to prevent oversteeping.”
+            </h3>
+            <img
+              src="./Images/Testimonials/martha stewart logo.png"
+              alt=""
+              class="d-xl-none"
+            />
+          </div>
+
+          <div
+            class="swiper-slide text-center testimonials_title font-josefin d-xl-none"
+          >
+            <h6 style="font-size: 12px" class="fw-bold mb-0">IN THE PRESS</h6>
+
+            <h3
+              class="text-center testimonials_text font-nunito fw-400 mx-md-auto mb-0 px-lg-0"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              at culpa, praesentium necessitatibus fugit quod quia dolore iste
+              fuga adipisci, modi consequuntur obcaecati? Debitis inventore
+              neque voluptates odio nisi nihil.
+            </h3>
+            <img
+              src="./Images/Testimonials/buzzfeed logo.png"
+              alt=""
+              class="d-xl-none"
+            />
+          </div>
+          <div
+            class="swiper-slide text-center testimonials_title font-josefin d-xl-none"
+          >
+            <h6 style="font-size: 12px" class="fw-bold mb-0">IN THE PRESS</h6>
+
+            <h3
+              class="text-center testimonials_text font-nunito fw-400 mx-md-auto mb-0 px-xl-0"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              at culpa, praesentium necessitatibus fugit quod quia dolore iste
+              fuga adipisci, modi consequuntur obcaecati? Debitis inventore
+              neque voluptates odio nisi nihil.
+            </h3>
+            <img
+              src="./Images/Testimonials/fastcompany logo.png"
+              alt=""
+              class="d-xl-none"
+            />
+          </div>
+          <div
+            class="swiper-slide text-center testimonials_title font-josefin d-xl-none"
+          >
+            <h6 style="font-size: 12px" class="fw-bold mb-0">IN THE PRESS</h6>
+
+            <h3
+              class="text-center testimonials_text font-nunito fw-400 mx-md-auto mb-0 px-lg-0"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              at culpa, praesentium necessitatibus fugit quod quia dolore iste
+              fuga adipisci, modi consequuntur obcaecati? Debitis inventore
+              neque voluptates odio nisi nihil.
+            </h3>
+            <img
+              src="./Images/Testimonials/homegrounds logo.png"
+              alt=""
+              class="d-xl-none"
+            />
+          </div>
+          <div
+            class="swiper-slide text-center testimonials_title font-josefin d-xl-none"
+          >
+            <h6 style="font-size: 12px" class="fw-bold mb-0">IN THE PRESS</h6>
+
+            <h3
+              class="text-center testimonials_text font-nunito fw-400 mx-md-auto mb-0 px-lg-0"
+            >
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              at culpa, praesentium necessitatibus fugit quod quia dolore iste
+              fuga adipisci, modi consequuntur obcaecati? Debitis inventore
+              neque voluptates odio nisi nihil.
+            </h3>
+            <img
+              src="./Images/Testimonials/past logo.png"
+              alt=""
+              class="d-xl-none"
+            />
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide text-center testimonials_title font-josefin d-none d-xl-block"
+        >
+          <h6 style="font-size: 12px" class="fw-bold mb-0">IN THE PRESS</h6>
+
+          <h3
+            class="text-center testimonials_text font-nunito fw-400 mx-md-auto testimonial_big_screen_text mb-0 px-lg-0"
+          >
+            “The result is a richly flavored, super aromatic cup of coffee
+            without the usual silt in the <br />
+            bottom. The press isn’t just for coffee, either—there’s also a tea
+            filter available that <br />
+            isolates tea leaves to prevent oversteeping.”
+          </h3>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination d-xl-none"></div>
+      </div>
+      <div class="brands_container d-none d-xl-flex justify-content-around">
+        <img
+          src="./Images/Testimonials/buzzfeed logo.png"
+          alt=""
+          id="buzzfeed"
+          onclick="innerTestimonialText();"
+          style="width: 170px; height: 58px; align-self: center"
+        />
+        <img
+          src="./Images/Testimonials/fastcompany logo.png"
+          alt=""
+          id="fastCompany"
+          onclick="innerTestimonialText();"
+          style="width: 158px; height: 67px; align-self: center"
+        />
+        <img
+          src="./Images/Testimonials/homegrounds logo.png"
+          alt=""
+          id="homegrounds"
+          onclick="innerTestimonialText();"
+          style="width: 211px; height: 46px; align-self: center"
+        />
+        <img
+          src="./Images/Testimonials/martha stewart logo.png"
+          alt=""
+          id="martha"
+          onclick="marthaText();"
+          style="width: 126px; height: 57px; align-self: center"
+        />
+        <img
+          src="./Images/Testimonials/past logo.png"
+          alt=""
+          id="past"
+          onclick="innerTestimonialText();"
+          style="width: 138px; height: 38px; align-self: center"
+        />
+      </div>
+    </div>
+
+    <!-- Video Section -->
+
+    <div class="video-container position-relative d-flex flex-column">
+      <marquee class="video_title_main text-center mb-0 font-barlow fw-700">
+        FRESH GROUNDS. 01 FRESH GROUNDS. 01
+      </marquee>
+      <div class="video_container">
+        <video
+          src="./Images/Pexels Videos 1437396.mp4"
+          class="w-100 d-block"
+          muted
+          loop
+        ></video>
+      </div>
+
+      <div
+        class="video_text position-absolute text-white d-flex flex-column align-items-center"
+      >
+        <h5
+          class="mx-auto text-center video_subtitle font-josefin fw-bold mb-0"
+        >
+          EPISODE 01: THE GREAT MIGRATION
+        </h5>
+        <h1 class="mx-auto text-center video_title font-barlow fw-700 mb-0">
+          FRESH GROUNDS
+        </h1>
+        <p class="d-lg-none mx-auto text-center font-nunito fw-400 video_p">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          <br class="d-none d-lg-block" />
+          sed diam nonumy eirmod tempor invidunt ut labore et.
+        </p>
+        <button
+          type="button"
+          class="btn mx-auto text-white video_btn playPause font-josefin fw-bold d-flex align-items-center justify-content-center"
+          style="border-radius: 26px"
+          onclick="playPause(this)"
+        >
+          <img src="./Images/icon_play_sign.svg" alt="" class="mb-1 me-2" />
+          WATCH FILM
+        </button>
+      </div>
+    </div>
+
+    <!--Stamp-->
+
+    <div class="container-fluid stamp_section_container">
+      <div class="row d-flex flex-column flex-lg-row align-items-lg-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="div_img position-relative img_container brew">
+            <img
+              data-sizes="auto"
+              src="./Images/stamp image.png"
+              alt=""
+              class="w-100 brew-img d-block"
+              width="630"
+              height="500"
+            />
+            <img
+              src="./Images/stamp.svg"
+              alt=""
+              class="position-absolute stamp"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 large_first">
+          <h3 class="brew-subtitle font-josefin fw-700 mb-0">
+            THE ULTIMATE BREW GUIDES
+          </h3>
+          <h1 class="brew_title font-barlow fw-700 mb-0">
+            COFFEE TO WATER RATIOS: HOW TO <br class="d-none d-sm-block" />
+            MEASURE COFFEE LIKE A PRO
+          </h1>
+          <p class="brew_text font-nunito fw-400">
+            <span class="fw-700">
+              You can taste it when you’ve brewed with the perfect coffee to
+              water <br class="d-none d-xxl-block" />
+              ratio. </span
+            >The acidity pops every so slightly, enhancing the rich flavors and
+            <br class="d-none d-xxl-block" />
+            aromas. Your coffee’s mouthfeel is smooth and satisfying. And the
+            flavor <br class="d-none d-xxl-block" />
+            is just strong enough that you can sense all its nuances across your
+            <br class="d-none d-xxl-block" />
+            10,000 taste buds, but not so strong that it’s uncomfortable. <br />
+            <br />
+            It’s an incredible experience—and too often, a hard one to come by.
+          </p>
+          <button
+            type="button"
+            class="btn mx-auto text-black fw-bold stamp_btn font-josefin d-flex justify-content-center align-items-center ms-0"
+            style="border-radius: 25px"
+          >
+            LEARN MORE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="instagram_container" style="background: #eff5f7">
+      <div class="insta_top_div row">
+        <div class="col-lg-6">
+          <h1 class="insta_title font-barlow fw-700 mb-0">
+            SHOW US YOUR BEST POUR.
+          </h1>
+          <p class="insta_paragraph font-nunito fw-400">
+            Making coffee better — one cup at a time. <br />
+            Share your best moments with us <span class="fw-bold"> #ESPRO</span>
+          </p>
+        </div>
+        <div
+          class="col-lg-6 d-lg-flex align-items-lg-center justify-content-lg-end"
+        >
+          <button
+            type="button"
+            class="btn text-black fw-bold insta_btn d-block font-josefin d-flex justify-content-center align-items-center"
+            style="border-radius: 26px"
+          >
+            <img
+              src="./Images/icon_instagram.svg"
+              alt=""
+              class="mb-1"
+              style="margin-right: 7px"
+            />
+            FOLLOW US ON INSTAGRAM
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider main container -->
+      <div class="swiper instaSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./Images/coffeeCup.png" alt="" class="d-block mx-auto" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./Images/aManHoldinACup.png"
+              alt=""
+              class="d-block mx-auto"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="./Images/drinkImage.png" alt="" class="d-block mx-auto" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./Images/aWomanWithBackpack.png"
+              alt=""
+              class="d-block mx-auto"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./Images/aCupOnATable.png"
+              alt=""
+              class="d-block mx-auto"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="./Images/aCup.png" alt="" class="d-block mx-auto" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev insta_next bg-white">
+          <img
+            src="./Images/icon_arrow_previous.svg"
+            alt=""
+            style="width: 25px"
+          />
+        </div>
+        <div class="swiper-button-next insta_next bg-white">
+          <img src="./Images/icon_arrow_next.svg" alt="" style="width: 25px" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer container-fluid bg-airBlue text-white">
+      <div class="row container-fluid mx-auto">
+        <div class="footer_text mx-auto col-lg-6 col-xl-5 ms-xl-0">
+          <h1 class="footer_title font-barlow fw-700 mb-0">
+            NEVER MISS A DROP.
+          </h1>
+          <p class="footer_text font-nunito fw-400">
+            Sign up to be the first to know about exclusive <br />
+            new deals, product launches and more.
+          </p>
+        </div>
+        <div
+          class="footer_input d-flex justify-content-between align-items-center col-lg-6 col-xl-7"
+        >
+          <input
+            type="email"
+            required
+            placeholder="Enter your email address"
+            class="footer_email"
+          />
+          <button
+            type="button"
+            class="btn input_btn font-josefin fw-700 text-white mb-0 p-0 border-0"
+          >
+            SIGN UP
+          </button>
+        </div>
+
+        <div class="dot_footer"></div>
+
+        <div class="row">
+          <div class="footer_logo col-lg-4">
+            <img
+              src="./Images/espro logo white.svg"
+              alt=""
+              class="footer_logo_img"
+            />
+            <p class="footer_logo_text font-nunito fw-400">
+              <span class="fw-700">We’re here to help.</span> <br />
+              service@espro.com <br />
+              1.844.377.7622
+            </p>
+          </div>
+          <div class="footer_ls d-flex col-lg-4">
+            <div class="ls_first col-6">
+              <h3 class="footer_list_title font-josefin fw-700 mb-0">LEARN</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="footer_list_item font-nunito fw-400">Blog</li>
+                <li class="footer_list_item font-nunito fw-400">Our Story</li>
+                <li class="footer_list_item font-nunito fw-400">Brew Guides</li>
+                <li class="footer_list_item font-nunito fw-400">Retailers</li>
+              </ul>
+            </div>
+            <div class="ls_second col-6">
+              <h3 class="footer_list_title font-josefin fw-700 mb-0">
+                SUPPORT
+              </h3>
+              <ul class="list-unstyled mb-0">
+                <li class="footer_list_item font-nunito fw-400">FAQ</li>
+                <li class="footer_list_item font-nunito fw-400">
+                  Shipping & Returns
+                </li>
+                <li class="footer_list_item font-nunito fw-400">
+                  Our Guarantee
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_cc d-flex px-0 col-lg-4">
+            <div class="cc_first col-6">
+              <h3 class="footer_list_title font-josefin fw-700 mb-0">
+                COPMANY
+              </h3>
+              <ul class="list-unstyled mb-0">
+                <li class="footer_list_item font-nunito fw-400">Contact</li>
+                <li class="footer_list_item font-nunito fw-400">Join Us</li>
+                <li class="footer_list_item font-nunito fw-400">Press</li>
+              </ul>
+            </div>
+
+            <div class="cc_second col-6">
+              <h3 class="footer_list_title font-josefin fw-700 mb-0">
+                CONNECT WITH US
+              </h3>
+              <div class="cc_second_icon_container d-flex">
+                <div
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    background: #84aec1;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  "
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <img src="./Images/icon_facebook.svg" alt="" />
+                </div>
+
+                <div
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    background: #84aec1;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  "
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <img src="./Images/icon_instagram_for_footer.svg" alt="" />
+                </div>
+                <div
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    background: #84aec1;
+                    border-radius: 50%;
+                  "
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <img src="./Images/icon_twitter.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="last_div d-lg-flex justify-content-between align-items-center"
+      >
+        <div class="t_and_p d-flex order-lg-2">
+          <p class="terms_text font-nunito fw-400">Terms & Privacy</p>
+          <p class="font-nunito fw-400">Patents</p>
+        </div>
+        <div class="copyright font-nunito fw-400 order-lg-1">
+          Copyright © 2021 Espro Inc.
+        </div>
+      </div>
+    </div>
+
+    <script src="./Javascript/index.js"></script>
+    <script src="./Javascript/bootstrap.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./Javascript/swiper.js"></script>
+  </body>
+</html>
