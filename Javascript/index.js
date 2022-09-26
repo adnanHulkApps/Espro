@@ -1,3 +1,17 @@
+// Sticky navbar - removing shipping message
+
+let shippingMessageHeight = 37;
+
+window.addEventListener("scroll", () => {
+  if (shippingMessageHeight < window.scrollY) {
+    document.querySelector(".navbar").style.position = "fixed";
+    document.querySelector(".navbar").style.top = 0;
+  } else {
+    document.querySelector(".navbar").style.position = "relative";
+    document.querySelector(".navbar").style.top = shippingMessageHeight;
+  }
+});
+
 // Changing hamburger toggle icon
 
 let sidebar = document.querySelector(".offcanvas-start");

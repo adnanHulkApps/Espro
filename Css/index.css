@@ -13,6 +13,10 @@
 
 /* Navbar  Sidebar*/
 
+.navbar {
+  z-index: 10;
+}
+
 .offcanvas-backdrop.show {
   opacity: 0 !important;
 }
@@ -65,6 +69,16 @@ nav {
 .nav_list {
   font-size: 13px;
   letter-spacing: 0.122em;
+  cursor: pointer;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--bs-seagull);
 }
 
 .nav_icon {
@@ -131,9 +145,16 @@ nav {
   margin-top: 25px;
 }
 
-.hero-btn:hover {
-  margin-right: 7px;
-  margin-bottom: 2px;
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-span {
+  transition: all 0.3s ease-out !important;
+}
+
+.btn:hover > .btn-span {
+  transform: scale(0.95) !important;
 }
 
 .hero-explore {
@@ -152,7 +173,7 @@ nav {
   }
   .hero-paragraph {
     font-weight: 300;
-    margin-top: 8px;
+    margin-top: 8px !important;
   }
   .hero-explore {
     font-size: 14px;
@@ -166,8 +187,30 @@ nav {
 
 /* Best Sellers Section */
 
+.tag {
+  transform: rotate(-0.25turn);
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  top: 10px;
+  left: 12px;
+  height: 26px;
+}
+
+#back_in_stock {
+  top: 45px;
+  left: -20px;
+}
+
+.best-sellers-swiper {
+  padding: 60px 0 55px 30px;
+}
+
 .best-sellers {
-  padding: 60px 0 55px 55px;
+  padding-left: 5px;
 }
 
 .card {
@@ -230,16 +273,23 @@ nav {
   display: none;
 }
 
+.best-sellers-swiper {
+  padding-top: 20px;
+}
+
 .seller-slide {
   transition: all ease-out 0.3s;
   overflow: hidden;
 }
 
+.card-x {
+  padding: 28px 15px !important;
+}
+
 .seller-slide:hover {
-  border-radius: 0.75em;
+  border-radius: 0.75em !important;
   box-shadow: 0 30px 40px #00000014;
   transform: translateY(-10px);
-  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 992px) {
@@ -411,9 +461,9 @@ nav {
   }
 
   .bottle_grass {
-    transform: scale(2.5);
+    transform: scale(1.7);
     left: 250px;
-    top: 97px;
+    top: 20px;
   }
 
   .woman_pouring_tea {
@@ -450,51 +500,11 @@ nav {
 .explore_container {
   padding-left: 20px;
   padding-right: 22px;
+  transition: all 0.3s ease-out !important;
 }
 
-.explore_first {
-  background-image: url("../Images/first.png") !important;
-  transition: all 0.3s ease;
-  background-repeat: no-repeat !important;
-  background-position: bottom !important;
-  margin-top: 22px;
-}
-
-.explore_second {
-  background-image: url("../Images/second.png") !important;
-  transition: all 0.3s ease;
-  background-repeat: no-repeat !important;
-  background-position: bottom !important;
-  margin-top: 25px;
-}
-
-.explore_third {
-  background-image: url("../Images/third.png") !important;
-  transition: all 0.3s ease;
-  background-repeat: no-repeat !important;
-  background-position: bottom !important;
-  margin-top: 25px;
-}
-
-.explore_first:hover {
-  background-image: url("../Images/Mask1.png") !important;
-  background: #8db9ca;
-}
-
-.explore_second:hover {
-  background-image: url("../Images/Mask2.png") !important;
-  background: #6bbbae;
-}
-
-.explore_third:hover {
-  background-image: url("../Images/Mask3.png") !important;
-  background: #9099ba;
-}
-
-.explore_first:hover > .explore_btn,
-.explore_second:hover > .explore_btn,
-.explore_third:hover > .explore_btn {
-  display: block !important;
+.explore_btn {
+  visibility: hidden;
 }
 
 .explore_first,
@@ -502,17 +512,26 @@ nav {
 .explore_third {
   height: 400px !important;
   width: 100% !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   cursor: pointer;
+  transition: all 0.3s ease-out !important;
+}
+
+.showFirst,
+.showOnHover {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-out !important;
 }
 
 .explore_title {
   font-size: 25px;
   letter-spacing: 0.04em;
-  margin-top: 40px;
-  margin-left: 30px;
+  top: 40px;
+  left: 30px;
+  z-index: 9;
 }
 
 .shop_btn {
@@ -522,7 +541,6 @@ nav {
 }
 
 .shop_btn:hover {
-  padding: 22.9px 28px !important;
   width: 218px;
 }
 
@@ -542,12 +560,45 @@ nav {
   border-radius: 26px !important;
   padding: 12px 25px !important;
   background-color: rgba(255, 255, 255, 0.7) !important;
-  margin-top: 12px;
-  margin-left: 24px;
+  top: 77px;
+  left: 30px;
+  transition: all 0.3s ease-out;
+}
+
+.explore_first:hover > .showFirst,
+.explore_second:hover > .showFirst,
+.explore_third:hover > .showFirst {
+  opacity: 0;
+  transition: all 0.3s ease-out !important;
+}
+
+.explore_first:hover > .showOnHover,
+.explore_second:hover > .showOnHover,
+.explore_third:hover > .showOnHover {
+  opacity: 1;
+  transition: all 0.3s ease-out !important;
+}
+
+.explore_first:hover > .explore_btn,
+.explore_second:hover > .explore_btn,
+.explore_third:hover > .explore_btn {
+  visibility: visible !important;
+  z-index: 9;
+  transition: all 0.3s ease-out !important;
 }
 
 .explore_btn:hover {
   background-color: white !important;
+}
+
+.explore_first:hover {
+  background: #8db9ca;
+}
+.explore_second:hover {
+  background: #7fa9ae;
+}
+.explore_third:hover {
+  background: #9099ba;
 }
 
 @media screen and (min-width: 768px) {
@@ -616,9 +667,7 @@ nav {
   padding: 20px 23px;
 }
 
-.experience_btn:hover {
-  width: 222px;
-}
+
 
 .experience_img {
   padding: 82px 58px 0 58px;
@@ -650,7 +699,7 @@ nav {
   }
   .experience_second_subtitle {
     padding: 0;
-    margin-top: 33px;
+    margin-top: 3px;
   }
   .experience_img {
     padding: 100px 140px 0 140px;
@@ -801,10 +850,11 @@ video {
 
 .stamp_section_container {
   padding: 115px 30px 70px 20px !important;
+  max-width: 1450px !important;
 }
 
 .stamp {
-  top: -5rem;
+  top: -72px;
   right: -1rem;
   z-index: 3;
   width: 109px;
@@ -858,9 +908,7 @@ video {
   padding: 20px 35px;
 }
 
-.stamp_btn:hover {
-  width: 180px !important;
-}
+
 
 @media screen and (min-width: 992px) {
   .stamp_section_container {

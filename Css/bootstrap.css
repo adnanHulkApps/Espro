@@ -3352,10 +3352,7 @@ textarea.form-control.is-invalid {
   user-select: none;
   background-color: transparent;
   border: 1px solid black;
-  height: 50px;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -3364,7 +3361,6 @@ textarea.form-control.is-invalid {
 }
 .btn:hover {
   color: #212529;
-  height: 54px !important;
 }
 .btn-check:focus + .btn,
 .btn:focus {
@@ -3433,10 +3429,28 @@ fieldset:disabled .btn {
   border-radius: 0;
   font-weight: 700;
   font-family: var(--bs-font-josefin-sans);
+  position: relative;
+  display: inline-block;
 }
+
+.btn-secondary::after {
+  content: " ";
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  transition: all 0.3s ease-out;
+  background-color: white;
+}
+
+.btn-secondary:hover::after {
+  width: 100%;
+}
+
 .btn-secondary:hover {
-  border-bottom: 1px solid var(--bs-raisin);
   height: 16.5px !important;
+  transform:scale(1) !important;
 }
 .btn-check:focus + .btn-secondary,
 .btn-secondary:focus {
